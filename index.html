@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BODY.EXE — Level Up Your Real Body Like an RPG Character</title>
+  <meta name="description" content="The Web3 gamified Pilates app for developers. Earn XP, unlock skills, and mint your fitness milestones on-chain. Your body is the ultimate codebase.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">BODY<span class="accent">.</span>EXE</span>
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#features">Features</a>
+        <a href="#web3">Web3</a>
+        <a href="#cta" class="nav-cta">Join Beta →</a>
+      </div>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#features">Features</a>
+      <a href="#web3">Web3</a>
+      <a href="#cta" class="nav-cta">Join Beta →</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge animate-in">
+        <span class="badge-dot"></span>
+        <span>🏆 Hackathon Project — ETH Global 2026</span>
+      </div>
+      <h1 class="hero-title animate-in delay-1">
+        Level Up Your<br>
+        <span class="gradient-text">Real Body</span><br>
+        Like an RPG Character<span class="cursor-blink">_</span>
+      </h1>
+      <p class="hero-sub animate-in delay-2">
+        The Web3 gamified Pilates protocol for developers who treat their body
+        like the <span class="code-inline">ultimate codebase</span>. Earn XP. Unlock skills. Mint milestones.
+      </p>
+      <div class="hero-actions animate-in delay-3">
+        <a href="#cta" class="btn btn-primary" id="hero-cta-primary">
+          <span class="btn-glow"></span>
+          <span class="btn-text">🚀 Mint Your Character</span>
+        </a>
+        <a href="#features" class="btn btn-ghost" id="hero-cta-secondary">
+          <span class="btn-text">View Skills Tree ↓</span>
+        </a>
+      </div>
+      <!-- Floating RPG Stats Card -->
+      <div class="hero-stats-card animate-in delay-4">
+        <div class="stats-header">
+          <span class="stats-avatar">🧙‍♂️</span>
+          <div>
+            <span class="stats-name">dev_warrior.eth</span>
+            <span class="stats-level">LVL 42 · Pilates Mage</span>
+          </div>
+        </div>
+        <div class="stats-bars">
+          <div class="stat-row">
+            <span class="stat-label">🔥 Core Strength</span>
+            <div class="stat-bar"><div class="stat-fill" data-width="78" style="--bar-color: var(--accent-orange)"></div></div>
+            <span class="stat-val">78</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">🧘 Flexibility</span>
+            <div class="stat-bar"><div class="stat-fill" data-width="65" style="--bar-color: var(--accent-purple)"></div></div>
+            <span class="stat-val">65</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">⚡ Endurance</span>
+            <div class="stat-bar"><div class="stat-fill" data-width="52" style="--bar-color: var(--accent-cyan)"></div></div>
+            <span class="stat-val">52</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">🛡️ Posture</span>
+            <div class="stat-bar"><div class="stat-fill" data-width="90" style="--bar-color: var(--accent-green)"></div></div>
+            <span class="stat-val">90</span>
+          </div>
+        </div>
+        <div class="stats-xp">
+          <span>XP: 12,450 / 15,000</span>
+          <div class="xp-bar"><div class="xp-fill"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- PROBLEM SECTION -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="problem" class="section problem">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// THE BUG IN YOUR SYSTEM</span>
+      </div>
+      <h2 class="section-title">
+        Your Code Compiles.<br>
+        <span class="gradient-text-red">Your Body Doesn't.</span>
+      </h2>
+      <p class="section-desc">
+        You ship features at 2 AM, mass <code>git commit</code> your weekends, and debug production fires in your pajamas. 
+        Meanwhile, your body is throwing <span class="code-inline">unhandled exceptions</span> you keep ignoring.
+      </p>
+      <div class="problem-grid">
+        <div class="problem-card" id="problem-card-1">
+          <div class="problem-icon">💀</div>
+          <div class="problem-stat">72%</div>
+          <p>of developers report chronic back pain from sitting 10+ hours daily</p>
+          <div class="problem-code">
+            <code>Error: SpineModule.load() — POSTURE_OVERFLOW</code>
+          </div>
+        </div>
+        <div class="problem-card" id="problem-card-2">
+          <div class="problem-icon">🧠</div>
+          <div class="problem-stat">3x</div>
+          <p>higher burnout risk for remote workers who never move between tasks</p>
+          <div class="problem-code">
+            <code>Warning: MentalHealth stack depth exceeded</code>
+          </div>
+        </div>
+        <div class="problem-card" id="problem-card-3">
+          <div class="problem-icon">🪫</div>
+          <div class="problem-stat">89%</div>
+          <p>of gym memberships by tech workers go unused after 3 months</p>
+          <div class="problem-code">
+            <code>Fatal: Motivation.getInstance() returned NULL</code>
+          </div>
+        </div>
+        <div class="problem-card" id="problem-card-4">
+          <div class="problem-icon">⚰️</div>
+          <div class="problem-stat">0</div>
+          <p>fitness apps speak the language of developers and gamers</p>
+          <div class="problem-code">
+            <code>404: FitnessApp.forDevs() — NOT_FOUND</code>
+          </div>
+        </div>
+      </div>
+      <div class="problem-terminal">
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">health_check.sh</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <p><span class="t-green">$</span> body --status</p>
+          <p><span class="t-yellow">[WARN]</span> Posture degradation detected: 47% deviation</p>
+          <p><span class="t-red">[ERR]</span> Core stability module: NOT FOUND</p>
+          <p><span class="t-red">[ERR]</span> Flexibility runtime: DEPRECATED (last update: 2019)</p>
+          <p><span class="t-yellow">[WARN]</span> Sleep cycle: irregular — avg 5.2h</p>
+          <p><span class="t-red">[CRIT]</span> System approaching total burnout in 180 days</p>
+          <p class="t-cyan">→ Recommended fix: <span class="t-green">npm install body-exe --save-yourself</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- SOLUTION SECTION -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="solution" class="section solution">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// THE PATCH</span>
+      </div>
+      <h2 class="section-title">
+        What If Your Body Had a<br>
+        <span class="gradient-text">Skill Tree?</span>
+      </h2>
+      <p class="section-desc">
+        BODY.EXE turns Pilates — the world's most effective bodyweight system — into a fully gamified RPG experience 
+        built for how developers think. Every rep is XP. Every session is a quest. Every milestone is an on-chain achievement.
+      </p>
+      <div class="solution-columns">
+        <div class="solution-col old">
+          <h3 class="sol-col-title"><span class="sol-x">✕</span> Old Fitness</h3>
+          <ul>
+            <li>Generic workout plans</li>
+            <li>No progression system</li>
+            <li>Zero accountability</li>
+            <li>"Just go to the gym bro"</li>
+            <li>Boring. Forgettable. Abandoned.</li>
+          </ul>
+        </div>
+        <div class="solution-vs">VS</div>
+        <div class="solution-col new">
+          <h3 class="sol-col-title"><span class="sol-check">✓</span> BODY.EXE</h3>
+          <ul>
+            <li>RPG class system (Mage, Tank, Rogue)</li>
+            <li>XP, levels, and skill trees</li>
+            <li>Guild challenges & leaderboards</li>
+            <li>AI-powered form analysis</li>
+            <li>Addictive. Rewarding. On-chain.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- FEATURES SECTION -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="features" class="section features">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// FEATURE FLAGS</span>
+      </div>
+      <h2 class="section-title">
+        Your Body's<br>
+        <span class="gradient-text">API Reference</span>
+      </h2>
+      <div class="features-grid">
+        <div class="feature-card large" id="feature-rpg">
+          <div class="feature-tag">CORE</div>
+          <div class="feature-icon-large">⚔️</div>
+          <h3>RPG Class System</h3>
+          <p>Choose your class: <strong>Core Mage</strong> (flexibility & flow), <strong>Iron Tank</strong> (strength & stability), or <strong>Speed Rogue</strong> (cardio & agility). Each class unlocks a unique Pilates skill tree with 50+ exercises.</p>
+          <div class="feature-demo">
+            <div class="class-selector">
+              <button class="class-btn active" data-class="mage" id="class-btn-mage">🧙 Mage</button>
+              <button class="class-btn" data-class="tank" id="class-btn-tank">🛡️ Tank</button>
+              <button class="class-btn" data-class="rogue" id="class-btn-rogue">⚡ Rogue</button>
+            </div>
+            <div class="class-info" id="class-info">
+              <div class="class-detail active" id="class-mage">
+                <span class="class-stat">Primary: Flexibility +15</span>
+                <span class="class-stat">Secondary: Balance +10</span>
+                <span class="class-stat">Passive: Zen Focus — reduces stress by 20%</span>
+              </div>
+              <div class="class-detail" id="class-tank">
+                <span class="class-stat">Primary: Core Strength +15</span>
+                <span class="class-stat">Secondary: Posture +10</span>
+                <span class="class-stat">Passive: Iron Spine — back pain immunity</span>
+              </div>
+              <div class="class-detail" id="class-rogue">
+                <span class="class-stat">Primary: Endurance +15</span>
+                <span class="class-stat">Secondary: Speed +10</span>
+                <span class="class-stat">Passive: Reflex Boost — reaction time +30%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card" id="feature-xp">
+          <div class="feature-tag">PROGRESSION</div>
+          <div class="feature-icon">📈</div>
+          <h3>XP & Leveling</h3>
+          <p>Every exercise earns XP. String together combos for multipliers. Hit daily streaks to unlock bonus loot. Your fitness journey has a progress bar now.</p>
+        </div>
+        <div class="feature-card" id="feature-quests">
+          <div class="feature-tag">ENGAGEMENT</div>
+          <div class="feature-icon">🗺️</div>
+          <h3>Daily Quests</h3>
+          <p>Wake up to fresh quests calibrated to your level. "Complete 3 core exercises before standup." "Hold plank for 90 seconds during compile." Micro-missions that fit dev life.</p>
+        </div>
+        <div class="feature-card" id="feature-guilds">
+          <div class="feature-tag">SOCIAL</div>
+          <div class="feature-icon">👥</div>
+          <h3>Dev Guilds</h3>
+          <p>Form guilds with your team. Compete in weekly sprints (the Pilates kind). Top guild each month earns token rewards and exclusive NFT badges.</p>
+        </div>
+        <div class="feature-card" id="feature-ai">
+          <div class="feature-tag">AI</div>
+          <div class="feature-icon">🤖</div>
+          <h3>AI Form Coach</h3>
+          <p>Computer vision analyzes your form in real-time via webcam. Get instant corrections like a senior dev reviewing your PR — but for your body mechanics.</p>
+        </div>
+        <div class="feature-card" id="feature-ide">
+          <div class="feature-tag">INTEGRATION</div>
+          <div class="feature-icon">💻</div>
+          <h3>IDE Plugin</h3>
+          <p>VS Code extension that prompts micro-exercises during long coding sessions. Respects your flow state. Activates during natural break points. No focus interruption.</p>
+        </div>
+        <div class="feature-card" id="feature-pomodoro">
+          <div class="feature-tag">PRODUCTIVITY</div>
+          <div class="feature-icon">🍅</div>
+          <h3>Pomodoro × Pilates</h3>
+          <p>Built-in Pomodoro timer that replaces break time with targeted 5-minute exercise flows. Ship code AND ship your body in the same sprint cycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- WEB3 SECTION -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="web3" class="section web3">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// ON-CHAIN MODULE</span>
+      </div>
+      <h2 class="section-title">
+        Your Gains.<br>
+        <span class="gradient-text-purple">Immutable.</span>
+      </h2>
+      <p class="section-desc">
+        BODY.EXE is built on a decentralized fitness protocol. Your progress isn't stored in some company's database 
+        that gets sunset next quarter — it lives on-chain, owned by you, forever.
+      </p>
+      <div class="web3-grid">
+        <div class="web3-card" id="web3-token">
+          <div class="web3-icon">🪙</div>
+          <h3>$FLEX Token</h3>
+          <p>Earn $FLEX for completing workouts, hitting streaks, and winning guild challenges. Stake tokens to unlock premium content or trade on DEXs.</p>
+          <div class="web3-tag">ERC-20</div>
+        </div>
+        <div class="web3-card" id="web3-nft">
+          <div class="web3-icon">🎖️</div>
+          <h3>Achievement NFTs</h3>
+          <p>Mint soulbound NFTs for major milestones: "100-Day Streak", "Core Mastery", "Guild Champion". Flex your actual fitness flex on-chain.</p>
+          <div class="web3-tag">ERC-721</div>
+        </div>
+        <div class="web3-card" id="web3-dao">
+          <div class="web3-icon">🏛️</div>
+          <h3>FitDAO Governance</h3>
+          <p>$FLEX holders vote on new exercise content, feature roadmap, and community treasury allocation. The community IS the product team.</p>
+          <div class="web3-tag">Governance</div>
+        </div>
+        <div class="web3-card" id="web3-proof">
+          <div class="web3-icon">✅</div>
+          <h3>Proof of Workout</h3>
+          <p>ZK-proof verified workout completion. No faking reps. Your on-chain fitness reputation is cryptographically verified and fully transparent.</p>
+          <div class="web3-tag">ZK-Proof</div>
+        </div>
+      </div>
+      <div class="web3-chain-visual">
+        <div class="chain-block">
+          <span class="chain-label">Block #4,207</span>
+          <span class="chain-data">🧘 Plank Hold: 120s</span>
+          <span class="chain-hash">0x7f3a...c9d1</span>
+        </div>
+        <div class="chain-connector">⟶</div>
+        <div class="chain-block">
+          <span class="chain-label">Block #4,208</span>
+          <span class="chain-data">⚡ +250 XP Earned</span>
+          <span class="chain-hash">0x2b8e...f4a7</span>
+        </div>
+        <div class="chain-connector">⟶</div>
+        <div class="chain-block">
+          <span class="chain-label">Block #4,209</span>
+          <span class="chain-data">🎖️ NFT: Iron Core I</span>
+          <span class="chain-hash">0x9c1d...a3b5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- TESTIMONIALS / SOCIAL PROOF -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section social-proof">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// PULL REQUESTS (APPROVED)</span>
+      </div>
+      <h2 class="section-title">
+        Early Access<br>
+        <span class="gradient-text">Reviews</span>
+      </h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card" id="testimonial-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"I've tried every fitness app. This is the first one that actually speaks my language. Hit a 30-day streak and my back pain is basically gone. Also my guild is beating the DevOps team and I refuse to let them win."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">👨‍💻</span>
+            <div>
+              <span class="testimonial-name">@stackoverflowed</span>
+              <span class="testimonial-role">Senior Frontend Dev · LVL 38</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testimonial-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The VS Code extension is genius. It detects when I've been sitting for 90 minutes and suggests a 3-minute flow. I'm more productive AND my posture score went from 34 to 87. Ship it."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">👩‍💻</span>
+            <div>
+              <span class="testimonial-name">@rustacean_jane</span>
+              <span class="testimonial-role">Systems Engineer · LVL 27</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" id="testimonial-3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Proof of Workout is the killer feature. My fitness NFTs are the only NFTs I'm genuinely proud to own. They represent real effort, verified on-chain. This is what Web3 should be."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">🧑‍💻</span>
+            <div>
+              <span class="testimonial-name">@0xgains</span>
+              <span class="testimonial-role">Solidity Dev · LVL 45</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- CTA SECTION -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="cta" class="section cta-section">
+    <div class="container">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <h2 class="cta-title">
+          Ready to <span class="gradient-text">Push to Main</span>?
+        </h2>
+        <p class="cta-sub">
+          Join 4,200+ developers already in the beta. Your body's been running legacy code for too long. 
+          Time to <code>refactor</code>.
+        </p>
+        <div class="cta-form">
+          <div class="input-group">
+            <input type="email" id="email-input" placeholder="your.eth@email.com" class="cta-input" aria-label="Email address">
+            <button class="btn btn-primary btn-large" id="cta-submit-btn">
+              <span class="btn-glow"></span>
+              <span class="btn-text">🚀 Join Beta</span>
+            </button>
+          </div>
+          <p class="cta-note">Free during beta · No credit card · Just vibes and gains</p>
+        </div>
+        <div class="cta-stats">
+          <div class="cta-stat">
+            <span class="cta-stat-num" id="stat-devs">4,217</span>
+            <span class="cta-stat-label">Devs Enrolled</span>
+          </div>
+          <div class="cta-stat-divider"></div>
+          <div class="cta-stat">
+            <span class="cta-stat-num" id="stat-workouts">128K</span>
+            <span class="cta-stat-label">Workouts Logged</span>
+          </div>
+          <div class="cta-stat-divider"></div>
+          <div class="cta-stat">
+            <span class="cta-stat-num" id="stat-flex">2.4M</span>
+            <span class="cta-stat-label">$FLEX Earned</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">BODY<span class="accent">.</span>EXE</span>
+        <p class="footer-tagline">Your body is the ultimate codebase.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Protocol</h4>
+          <a href="#">Whitepaper</a>
+          <a href="#">Docs</a>
+          <a href="#">GitHub</a>
+          <a href="#">Audit Report</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="#">Discord</a>
+          <a href="#">Twitter / X</a>
+          <a href="#">Telegram</a>
+          <a href="#">Forum</a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#">Roadmap</a>
+          <a href="#">Changelog</a>
+          <a href="#">Bug Bounty</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BODY.EXE Protocol · Built with 💪 and ☕ · All gains reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
